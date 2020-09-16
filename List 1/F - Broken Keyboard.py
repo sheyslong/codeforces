@@ -11,8 +11,6 @@ def repeat(index, s, aux):
                     aux.append(s[index])
                 repeat(index+1, s, aux)
 
-
-
 def order(s):
     sort = sorted(s)
     join = ""

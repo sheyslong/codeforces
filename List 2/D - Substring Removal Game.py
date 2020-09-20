@@ -13,13 +13,18 @@ def countOne(array):
         aux.append(count)
     return aux
 
-def countAnna(array):
+def countAlice(array):
     count=0
-    for i in range(0, len(array), 2):
-        count+=array[i]
+    isAlice = True
+    for i in range(len(array)):
+        max_ = max(array)
+        if isAlice:
+            count+=max_
+        isAlice=not(isAlice)
+        array.remove(max_)
     return count
-    
+
 for i in range(n_tc):
     string = input()
     aux = countOne(string)
-    print(countAnna(aux))
+    print(countAlice(aux))
